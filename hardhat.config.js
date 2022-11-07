@@ -7,7 +7,7 @@ module.exports = {
   solidity: "0.8.17",
   networks: {
     goerli: {
-      url: process.env.API_URL,
+      url: process.env.NEXT_PUBLIC_API_URL,
       accounts: [`0x${process.env.PRIVATE_KEY}`],
     },
   },

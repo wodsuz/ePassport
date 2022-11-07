@@ -71,7 +71,7 @@
     
       event PassportMinted(uint256 tokenId, address owner);
     
-      constructor() ERC721("ePassport", "ePass") {}
+      constructor() ERC721("ePassport", "ePassport") {}
     
       function _baseURI() internal view virtual override returns (string memory) {
         return baseURI;
