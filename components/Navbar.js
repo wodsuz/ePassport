@@ -1,14 +1,9 @@
-import Head from "next/head";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useStatus } from "../context/statusContext";
 import { connectWallet, getCurrentWalletConnected } from "../utils/interact";
 
-const Header = () => {
-  const pageTitle = "ePassport";
-  const description =
-    "ePassport mint your digital Passport. With ePassport you can get collect stamps of your favourite cities, earn rewards, become a member of exclusive club, get discounts while travelling, customize your virtual passport and order the physical ePassport NFT.";
-
+const Navbar = () => {
   const [walletAddress, setWalletAddress] = useState("");
   const { setStatus } = useStatus();
 
@@ -46,12 +41,6 @@ const Header = () => {
 
   return (
     <>
-      <Head>
-        <title>{pageTitle}</title>
-        <meta name="description" content={description} />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <header className="sticky inset-x-0 top-0 z-10 h-20 min-w-full text-white border-b border-purple-900 bg-primary backdrop-filter backdrop-blur-lg bg-opacity-30">
         <div className="container flex items-center justify-between h-full mx-auto max-w-7xl">
           {/* Logo */}
@@ -67,19 +56,37 @@ const Header = () => {
             <ul className="flex items-center space-x-8">
               <li className="text-gray-200 text-semibold">
                 <Link href="#about" passHref={true}>
+                  <>Home</>
+                </Link>
+              </li>
+
+              <li className="text-gray-200 text-semibold">
+                <Link href="#about" passHref={true}>
                   <>About</>
                 </Link>
               </li>
 
               <li className="text-gray-200 text-semibold">
+                <Link href="#about" passHref={true}>
+                  <>Roadmap</>
+                </Link>
+              </li>
+
+              <li className="text-gray-200 text-semibold">
                 <Link href="#gallery" passHref={true}>
-                  <>The Gallery</>
+                  <>Showcase</>
+                </Link>
+              </li>
+
+              <li className="text-gray-200 text-semibold">
+                <Link href="#gallery" passHref={true}>
+                  <>Team</>
                 </Link>
               </li>
 
               <li className="text-gray-200 text-semibold">
                 <Link href="#faq" passHref={true}>
-                  <>FAQ</>
+                  <>Faq</>
                 </Link>
               </li>
 
@@ -184,4 +191,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;
