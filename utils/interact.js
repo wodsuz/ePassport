@@ -1,7 +1,7 @@
 import { ethers } from "ethers";
 import { CONTRACT_ADDRESS, API_KEY } from "../src/env";
 
-const contract = require("../artifacts/contracts/ePassport.sol/ePassport.json");
+const contract = require("../abi/ePassport.json");
 const alchemyProvider = new ethers.providers.AlchemyProvider("goerli", API_KEY);
 const nftContract = new ethers.Contract(
   CONTRACT_ADDRESS,
